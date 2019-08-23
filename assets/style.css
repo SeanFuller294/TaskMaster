@@ -1,0 +1,57 @@
+body{
+  background-color: grey
+}
+.grey{
+  background-color:grey
+}
+.black{
+  background-color:black
+}
+.red{
+background-color: red
+}
+.orange{
+background-color: orange
+}
+.yellow{
+background-color: yellow
+}
+.green{
+background-color: green
+}
+.blue{
+background-color: blue;
+}
+.purple{
+  background-color: violet
+}
+.white{
+  background-color: white
+}
+.textwhite{
+  color: white
+}
+.textred{
+  color:red
+}
+.textorange{
+  color: orange
+}
+.textyellow{
+  color: yellow
+}
+.textgreen{
+  color:green
+}
+.textblue{
+  color:blue
+}
+.textpurple{
+  color:violet
+}
+.textblack{
+  color:black
+}
+.textgrey{
+  color:grey
+}

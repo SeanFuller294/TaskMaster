@@ -29,6 +29,8 @@ export default class ListController {
         let form = event.target
         let newList = {
             title: form.title.value,
+            color: form.color.value,
+            textColor: form.textColor.value
         }
         _listService.addList(newList)
         _drawLists()

@@ -5,10 +5,13 @@ export default class List {
     constructor(data) {
         this.title = data.title
         this.tasks = data.tasks || []
+        this.color = data.color || "white"
+        this.textColor = data.textColor
     }
+
     getTemplate(index) {
         let template = `
-        <div class = "col-4">
+        <div class = "col-4  ${this.color} text${this.textColor}">
       <h1>${this.title}</h1>
       <ul>`
         template += this.drawTasks(index)
