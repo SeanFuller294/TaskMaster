@@ -30,7 +30,7 @@ export default class ListController {
         let newList = {
             title: form.title.value,
             color: form.color.value,
-            textColor: form.textColor.value
+            textColor: form.textColor.value,
         }
         _listService.addList(newList)
         _drawLists()
@@ -52,6 +52,10 @@ export default class ListController {
         } else {
 
         }
+    }
+    completeList(index) {
+        _listService.completeList(index)
+        _drawLists()
     }
 
     deleteTask(listIndex, taskIndex) {

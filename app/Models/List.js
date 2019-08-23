@@ -7,11 +7,13 @@ export default class List {
         this.tasks = data.tasks || []
         this.color = data.color || "white"
         this.textColor = data.textColor
+        this.complete = data.complete
     }
 
     getTemplate(index) {
         let template = `
-        <div class = "col-4  ${this.color} text${this.textColor}">
+        <div class = "col-4 ${this.color} text${this.textColor}">
+        <i class="${this.complete}"></i>
       <h1>${this.title}</h1>
       <ul>`
         template += this.drawTasks(index)
@@ -24,6 +26,7 @@ export default class List {
                 <button class="btn btn-success"type="submit">Add Task</button>
                 </form>
       <button class="btn btn-danger" onclick="app.controllers.listController.deleteList(${index})">DELETE LIST</button>
+      <button class="btn btn-success" onclick"app.controllers.listController.completeList(${index})>Done</button>
       </div>
         `
         return template
