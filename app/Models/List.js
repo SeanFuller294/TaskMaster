@@ -13,7 +13,7 @@ export default class List {
       <ul>`
         template += this.drawTasks(index)
         template += `
-    <form onsubmit="app.controllers.listController.addTaks(event, ${index})">
+    <form onsubmit="app.controllers.listController.addTask(event, ${index})">
     <div class="form-group">
                 <label for="task"></label>
                 <input type="text" class="form-control" name="task" placeholder="Enter Task" required>
@@ -29,7 +29,7 @@ export default class List {
     drawTasks(index) {
         let taskTemplate = ""
         this.tasks.forEach((task, taskIndex) => {
-            taskTemplate += `<li>${task} <button class="btn btn-danger"onclick="app.controllers.dessertController.deleteTopping(${index},${taskIndex})">X</button></li>`
+            taskTemplate += `<li>${task} <button class="btn btn-danger"onclick="app.controllers.listController.deleteTask(${index},${taskIndex})">X</button></li>`
         });
         return taskTemplate
     }
