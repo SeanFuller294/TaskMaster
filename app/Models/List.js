@@ -12,7 +12,7 @@ export default class List {
     getTemplate(index) {
         let template = `
         <div class = "col-4 ${this.color} text${this.textColor}">
-        <div><i class="${this.complete}"></i></div>
+        <div class="text-center"><i class="${this.complete}"></i></div>
       <h1>${this.title}</h1>
       <ul>`
         template += this.drawTasks(index)
