@@ -7,10 +7,7 @@ let _state = {
 
 
 //Public
-export default class ValuesService {
-    completeList(index) {
-        _state.lists[index].completed = "fas fa-check-circle"
-    }
+export default class ListService {
     //TODO  Here is where we handle all of our data manipulation, 
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
@@ -18,6 +15,14 @@ export default class ValuesService {
         this.getLists()
     }
 
+    completeList(index) {
+        if (_state.lists[index].complete != "fas fa-check-circle") {
+            _state.lists[index].complete = "fas fa-check-circle"
+        } else {
+            _state.lists[index].complete = ""
+        }
+        this.saveLists()
+    }
 
     addTask(newTask, listIndex) {
         _state.lists[listIndex].tasks.push(newTask)

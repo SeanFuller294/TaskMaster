@@ -53,6 +53,7 @@ export default class ListController {
 
         }
     }
+
     completeList(index) {
         _listService.completeList(index)
         _drawLists()
